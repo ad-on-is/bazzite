@@ -4,12 +4,12 @@ COPY build_files /
 COPY system_files /system_files
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite:stable
+FROM ghcr.io/ublue-os/bazzite-dx:stable
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:testing
 # FROM ghcr.io/ublue-os/aurora:stable
 # FROM ghcr.io/ublue-os/bluefin-nvidia-open:stable
-# 
+#
 # ... and so on, here are more base images
 # Universal Blue Images: https://github.com/orgs/ublue-os/packages
 # Fedora base image: quay.io/fedora/fedora-bootc:44
@@ -31,10 +31,10 @@ FROM ghcr.io/ublue-os/bazzite:stable
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
-    --mount=type=cache,dst=/var/cache \
-    --mount=type=cache,dst=/var/log \
-    --mount=type=tmpfs,dst=/tmp \
-    /ctx/build.sh
+  --mount=type=cache,dst=/var/cache \
+  --mount=type=cache,dst=/var/log \
+  --mount=type=tmpfs,dst=/tmp \
+  /ctx/build.sh
 
 ### LINTING
 ## Verify final image and contents are correct.
