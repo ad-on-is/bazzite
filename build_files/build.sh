@@ -23,7 +23,7 @@ for repo in "${repos[@]}"; do
   dnf5 -y copr enable "$repo"
 done
 
-dnf5 -y install \
+dnf5 -y install --enablerepo=terra --allowerasing \
   hyprland \
   udiskie \
   dms \
