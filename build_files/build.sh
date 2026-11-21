@@ -24,11 +24,11 @@ for repo in "${repos[@]}"; do
 done
 
 dnf5 -y install --enablerepo=terra --allowerasing \
-  hyprland \
+  hyprland hyprland-guiutils xdg-desktop-portal-hyprland \
   udiskie \
   dms \
   grim slurp \
-  ghostty \
+  ghostty kitty \
   eza fd-find ripgrep starship \
   neovim
 
