@@ -26,6 +26,8 @@ done
 dnf5 -y install --enablerepo=terra --allowerasing \
   hyprland hyprland-guiutils xdg-desktop-portal-hyprland \
   udiskie \
+  stow \
+  git \
   dms \
   grim slurp \
   ghostty kitty \
