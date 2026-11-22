@@ -24,7 +24,7 @@ for repo in "${repos[@]}"; do
 done
 
 dnf5 -y install --enablerepo=terra --allowerasing \
-  hyprland hyprland-guiutils xdg-desktop-portal-hyprland \
+  hyprland hyprland-uwsm hyprland-guiutils xdg-desktop-portal-hyprland \
   udiskie \
   stow \
   git \
