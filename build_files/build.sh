@@ -31,7 +31,8 @@ dnf5 -y install --enablerepo=terra --allowerasing \
   dms \
   grim slurp \
   ghostty kitty \
-  eza fd-find ripgrep starship \
+  eza fd-find ripgrep starship atuin \
+  firefox \
   neovim
 
 for repo in "${repos[@]}"; do
